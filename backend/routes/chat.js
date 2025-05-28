@@ -74,7 +74,12 @@ router.post("/", async (req, res) => {
     } else if (lowerMsg.includes("admission") || lowerMsg.includes("apply")) {
       reply = "Admissions are open! You can apply online through our official HIM website.";
     } else if (lowerMsg.includes("fees") || lowerMsg.includes("fee")) {
-      reply = "Our fee structure varies by course. Please visit himsonepat.org/fee-details.";
+      reply = `<p>our fee Structure varies from course to course. please select a course.</p>
+      <p><strong>Choose a course to know more :</strong></p>
+      <button data-message="BBA fee details">BBA</button>
+      <button data-message="BCA fee details">BCA</button>
+      <button data-message="MBA fee details">MBA</button>
+      <button data-message="MCA fee details">MCA</button>`;
     } else if (lowerMsg.includes("contact") || lowerMsg.includes("phone")) {
       reply = "You can call us at +91-1234567890 or email info@himsonepat.org.";
     } else if (lowerMsg.includes("hello") || lowerMsg.includes("hi")) {
