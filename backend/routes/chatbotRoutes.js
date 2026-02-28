@@ -1,26 +1,7 @@
-// // backend/routes/chatbotRoutes.js
-// const express = require('express');
-// const router = express.Router();
-// const { handleUserQuery, whatsappWebhook } = require('../controllers/chatbotController');
-
-// // API: Handle user query
-// router.post('/ask', handleUserQuery);
-
-// // API: WhatsApp webhook verification (optional if WhatsApp integration needed)
-// router.get('/webhook', whatsappWebhook);
-
-// // API: WhatsApp receive messages (optional if needed)
-// router.post('/webhook', (req, res) => {
-//   console.log('Received WhatsApp message:', req.body);
-//   res.sendStatus(200);
-// });
-
-// module.exports = router;
-
 const express = require('express');
 const router = express.Router();
 const QA = require('../models/QA');
-const staticChatData = require('./chat'); // ✅ one level up
+const staticChatData = require('./chat'); 
 
 
 // Hybrid logic route
